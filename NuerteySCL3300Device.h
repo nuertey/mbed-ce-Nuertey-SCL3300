@@ -756,20 +756,20 @@ void NuerteySCL3300Device::LaunchNormalOperationSequence()
     ReadAllSensorData();    
 
     // Gets() work on already retrieved instance of SCL3300SensorData_t.
-    printf("%s g. Gravitational Acceleration Constant, g = 9.819 m/s2\n",
+    printf("\tGetAccelerationXAxis() = %s g. Gravitational Acceleration Constant, g = 9.819 m/s2\n",
         TruncateAndToString<double>(GetAccelerationXAxis()).c_str());
-    printf("%s g. Gravitational Acceleration Constant, g = 9.819 m/s2\n", 
+    printf("\tGetAccelerationYAxis() = %s g. Gravitational Acceleration Constant, g = 9.819 m/s2\n", 
         TruncateAndToString<double>(GetAccelerationYAxis()).c_str());
-    printf("%s g. Gravitational Acceleration Constant, g = 9.819 m/s2\n", 
+    printf("\tGetAccelerationZAxis() = %s g. Gravitational Acceleration Constant, g = 9.819 m/s2\n", 
         TruncateAndToString<double>(GetAccelerationZAxis()).c_str());
 
-    printf("%s°\n", TruncateAndToString<double>(GetAngleXAxis()).c_str());
-    printf("%s°\n", TruncateAndToString<double>(GetAngleYAxis()).c_str());
-    printf("%s°\n", TruncateAndToString<double>(GetAngleZAxis()).c_str());
+    printf("\tGetAngleXAxis = %s°\n", TruncateAndToString<double>(GetAngleXAxis()).c_str());
+    printf("\tGetAngleYAxis = %s°\n", TruncateAndToString<double>(GetAngleYAxis()).c_str());
+    printf("\tGetAngleZAxis = %s°\n", TruncateAndToString<double>(GetAngleZAxis()).c_str());
     
-    printf("%s °C\n", TruncateAndToString<double>(GetTemperature<Celsius_t>()).c_str());
-    printf("%s °F\n", TruncateAndToString<double>(GetTemperature<Fahrenheit_t>()).c_str());
-    printf("%s K\n",  TruncateAndToString<double>(GetTemperature<Kelvin_t>()).c_str());
+    printf("\tGetTemperature<Celsius_t>() = %s °C\n", TruncateAndToString<double>(GetTemperature<Celsius_t>()).c_str());
+    printf("\tGetTemperature<Fahrenheit_t>() = %s °F\n", TruncateAndToString<double>(GetTemperature<Fahrenheit_t>()).c_str());
+    printf("\tGetTemperature<Kelvin_t>() = %s K\n",  TruncateAndToString<double>(GetTemperature<Kelvin_t>()).c_str());
     
     result = GetSelfTestOutputErrorCode();
     if (result) // We only care if there is indeed an error.
@@ -796,7 +796,7 @@ void NuerteySCL3300Device::LaunchNormalOperationSequence()
     result = ReadSerialNumber(mySerialNumber);
     if (!result)
     {
-        printf("SCL3300 Device Serial Number = %s", mySerialNumber.c_str());
+        printf("SCL3300 Device Serial Number = %s\n", mySerialNumber.c_str());
     }
     else
     {
