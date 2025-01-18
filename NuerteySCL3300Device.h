@@ -964,8 +964,8 @@ void NuerteySCL3300Device::ReadSensorData(T& item)
                         
                 if (!result)
                 {
-                    printf("Success! %s: \n\t[%d] -> Successfully retrieved \
-                        sensor data from the SCL3300 sensor device.\n\t%s\n", 
+                    printf("Success! %s: \n\t[%d] -> Successfully retrieved"
+                        " sensor data from the SCL3300 sensor device.\n\t%s\n", 
                         __PRETTY_FUNCTION__,
                         result.value(), 
                         std::get<3>(item).c_str());
@@ -1065,8 +1065,8 @@ std::error_code NuerteySCL3300Device::ClearStatusSummaryRegister()
                         result = ConvertStatusSummaryToErrorCode(std::get<2>(std::get<8>(g_TheSensorData)));
                         if ((!result) && (count = 3))
                         {
-                            printf("Success! %s: \n\t[%d] -> Completed clearing \
-                                the STATUS Summary register.\n", 
+                            printf("Success! %s: \n\t[%d] -> Completed clearing"
+                                " the STATUS Summary register.\n", 
                                 __PRETTY_FUNCTION__,
                                 result.value());
                         }                   
@@ -1149,8 +1149,8 @@ std::error_code NuerteySCL3300Device::ValidateSPIResponseFrame(T& sensorData,
                     {
                         startupIndication = false;
                         
-                        printf("Success! %s: \n\t[%d] -> First response where STATUS has been \
-                                cleared. RS bits are indicating proper start-up.\n", 
+                        printf("Success! %s: \n\t[%d] -> First response where STATUS has been"
+                               " cleared. RS bits are indicating proper start-up.\n", 
                             __PRETTY_FUNCTION__,
                             returnStatusMISO);
                     }
@@ -1733,8 +1733,8 @@ std::error_code NuerteySCL3300Device::ReadErrorFlag1Reason(uint16_t& errorFlag,
                         
                 if (!result)
                 {
-                    printf("Success! %s: \n\t[%d] -> Successfully received \
-                        contents of ERR_FLAG1 register.\n", 
+                    printf("Success! %s: \n\t[%d] -> Successfully received"
+                        " contents of ERR_FLAG1 register.\n", 
                         __PRETTY_FUNCTION__,
                         result.value());
                             
@@ -1813,8 +1813,8 @@ std::error_code NuerteySCL3300Device::ReadErrorFlag2Reason(uint16_t& errorFlag,
                         
                 if (!result)
                 {
-                    printf("Success! %s: \n\t[%d] -> Successfully received \
-                        contents of ERR_FLAG2 register.\n", 
+                    printf("Success! %s: \n\t[%d] -> Successfully received"
+                        " contents of ERR_FLAG2 register.\n", 
                         __PRETTY_FUNCTION__,
                         result.value());
                             
@@ -1907,8 +1907,8 @@ std::error_code NuerteySCL3300Device::ReadSerialNumber(std::string& serialNumber
                         
                 if (!result)
                 {
-                    printf("Success! %s: \n\t[%d] -> Successfully received \
-                        contents of SERIAL1 register.\n", 
+                    printf("Success! %s: \n\t[%d] -> Successfully received"
+                        " contents of SERIAL1 register.\n", 
                         __PRETTY_FUNCTION__,
                         result.value());
                            
@@ -1931,8 +1931,8 @@ std::error_code NuerteySCL3300Device::ReadSerialNumber(std::string& serialNumber
                         {
                             serialNumber = ComposeSerialNumber(serial1LSB, serial2MSB);
                             
-                            printf("Success! %s: \n\t[%d] -> Successfully received \
-                                contents of SERIAL2 register.\n\tSerial Number = %s\n", 
+                            printf("Success! %s: \n\t[%d] -> Successfully received"
+                                " contents of SERIAL2 register.\n\tSerial Number = %s\n", 
                                 __PRETTY_FUNCTION__,
                                 result.value(), serialNumber.c_str());           
                         }
@@ -2029,8 +2029,8 @@ std::error_code NuerteySCL3300Device::ReadCurrentBank(MemoryBank_t& bank)
                 {
                     bank = ToEnum<MemoryBank_t, uint16_t>(bankNumber);
                     
-                    printf("Success! %s: \n\t[%d] -> Successfully read \
-                        current bank register. \n\t%d\n", 
+                    printf("Success! %s: \n\t[%d] -> Successfully read"
+                        " current bank register. \n\t%d\n", 
                         __PRETTY_FUNCTION__,
                         result.value(), bankNumber);
                 }
@@ -2118,8 +2118,8 @@ std::error_code NuerteySCL3300Device::SwitchToBank()
                         
                 if (!result)
                 {
-                    printf("Success! %s: \n\t[%d] -> Successfully switched \
-                        the current memory bank register. \n\t%d\n", 
+                    printf("Success! %s: \n\t[%d] -> Successfully switched"
+                        " the current memory bank register. \n\t%d\n", 
                         __PRETTY_FUNCTION__,
                         result.value(), bankNumber);
                 }
@@ -2245,8 +2245,8 @@ std::error_code NuerteySCL3300Device::ReadCommandRegister(SixteenBits_t& bitValu
                 {
                     bitValue = SixteenBits_t{commandValue};
                     
-                    printf("Success! %s: \n\t[%d] -> Successfully read \
-                        command register of the SCL3300 sensor.\n", 
+                    printf("Success! %s: \n\t[%d] -> Successfully read"
+                        " command register of the SCL3300 sensor.\n", 
                         __PRETTY_FUNCTION__,
                         result.value());
                         
@@ -2347,8 +2347,8 @@ std::error_code NuerteySCL3300Device::WriteCommandOperation()
                         
                 if (!result)
                 {
-                    printf("Success! %s: \n\t[%d] -> Successfully wrote \
-                        command operation to the SCL3300 sensor.\n", 
+                    printf("Success! %s: \n\t[%d] -> Successfully wrote"
+                        " command operation to the SCL3300 sensor.\n", 
                         __PRETTY_FUNCTION__,
                         result.value());
                         
@@ -2428,8 +2428,8 @@ std::error_code NuerteySCL3300Device::EnableAngleOutputs()
                         
                 if (!result)
                 {
-                    printf("Success! %s: \n\t[%d] -> Successfully wrote \
-                        ENABLE_ANGLE_OUTPUTS to the SCL3300 sensor.\n", 
+                    printf("Success! %s: \n\t[%d] -> Successfully wrote"
+                        " ENABLE_ANGLE_OUTPUTS to the SCL3300 sensor.\n", 
                         __PRETTY_FUNCTION__,
                         result.value());
                 }
