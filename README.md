@@ -351,6 +351,14 @@ drwxrwxr-x 15 osboxes osboxes     4096 Jan 13 08:34 mbed-os
 
 ```shell-session
 
+nuertey@nuertey-PC-LL850RSB:~$ kermit -c
+Connecting to /dev/ttyACM0, speed 115200
+ Escape character: Ctrl-\ (ASCII 28, FS): enabled
+Type the escape character followed by C to get back,
+or followed by ? to see other options.
+----------------------------------------------------
+
+
 mbed-ce-Nuertey-SCL3300 - Beginning... 
 
 Software resetting the SCL3300 sensor...
@@ -419,15 +427,15 @@ Success! void NuerteySCL3300Device::ReadSensorData(T&) [with auto:41 = std::tupl
     [0] -> Successfully retrieved sensor data from the SCL3300 sensor device.
     READ_WHO_AM_I
 Switching the SCL3300 sensor operations to memory bank 0...
-    GetAccelerationXAxis() = -0.26 g. Gravitational Acceleration Constant, g = 9.819 m/s2
-    GetAccelerationYAxis() = 0.15 g. Gravitational Acceleration Constant, g = 9.819 m/s2
-    GetAccelerationZAxis() = -0.39 g. Gravitational Acceleration Constant, g = 9.819 m/s2
-    GetAngleXAxis = 327.98°
-    GetAngleYAxis = 17.67°
-    GetAngleZAxis = 307.67°
-    GetTemperature<Celsius_t>() = 21.34 °C
-    GetTemperature<Fahrenheit_t>() = 70.41 °F
-    GetTemperature<Kelvin_t>() = 294.34 K
+    GetAccelerationXAxis() = -0.27 g. Gravitational Acceleration Constant, g = 9.819 m/s2
+    GetAccelerationYAxis() = 0.11 g. Gravitational Acceleration Constant, g = 9.819 m/s2
+    GetAccelerationZAxis() = -0.40 g. Gravitational Acceleration Constant, g = 9.819 m/s2
+    GetAngleXAxis = 326.87°
+    GetAngleYAxis = 12.90°
+    GetAngleZAxis = 306.36°
+    GetTemperature<Celsius_t>() = 21.29 °C
+    GetTemperature<Fahrenheit_t>() = 70.31 °F
+    GetTemperature<Kelvin_t>() = 294.29 K
 Switching the SCL3300 sensor operations to memory bank 1...
 Success! std::error_code NuerteySCL3300Device::ReadSerialNumber(std::string&): 
     [0] -> Successfully received contents of SERIAL1 register.
@@ -469,6 +477,47 @@ Success! std::error_code NuerteySCL3300Device::ReadErrorFlag2Reason(uint16_t&, E
 Switching the SCL3300 sensor operations to memory bank 1...
 Success! std::error_code NuerteySCL3300Device::ClearStatusSummaryRegister(): 
     [0] -> Completed clearing the STATUS Summary register.
+Switching the SCL3300 sensor operations to memory bank 0...
+Switching the SCL3300 sensor operations to memory bank 1...
+Error! void NuerteySCL3300Device::ReadSensorData(T&) [with auto:41 = std::tuple<std::array<unsigned char, 4>, std::array<unsigned char, 4>, short int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&]: 
+    [-1] -> SPI Command Frame invalid or has incorrect frame CRC
+    READ_ACCELERATION_X_AXIS
+Switching the SCL3300 sensor operations to memory bank 1...
+Error! void NuerteySCL3300Device::ReadSensorData(T&) [with auto:41 = std::tuple<std::array<unsigned char, 4>, std::array<unsigned char, 4>, short int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&]: 
+    [-1] -> SPI Command Frame invalid or has incorrect frame CRC
+    READ_ACCELERATION_Y_AXIS
+Switching the SCL3300 sensor operations to memory bank 1...
+Error! void NuerteySCL3300Device::ReadSensorData(T&) [with auto:41 = std::tuple<std::array<unsigned char, 4>, std::array<unsigned char, 4>, short int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&]: 
+    [-1] -> SPI Command Frame invalid or has incorrect frame CRC
+    READ_ACCELERATION_Z_AXIS
+Switching the SCL3300 sensor operations to memory bank 1...
+Error! void NuerteySCL3300Device::ReadSensorData(T&) [with auto:41 = std::tuple<std::array<unsigned char, 4>, std::array<unsigned char, 4>, short int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&]: 
+    [-1] -> SPI Command Frame invalid or has incorrect frame CRC
+    READ_SELF_TEST_OUTPUT
+Switching the SCL3300 sensor operations to memory bank 1...
+Error! void NuerteySCL3300Device::ReadSensorData(T&) [with auto:41 = std::tuple<std::array<unsigned char, 4>, std::array<unsigned char, 4>, short int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&]: 
+    [-1] -> SPI Command Frame invalid or has incorrect frame CRC
+    READ_TEMPERATURE
+Switching the SCL3300 sensor operations to memory bank 0...
+Error! void NuerteySCL3300Device::ReadSensorData(T&) [with auto:41 = std::tuple<std::array<unsigned char, 4>, std::array<unsigned char, 4>, short int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&]: 
+    [-1] -> SPI Command Frame invalid or has incorrect frame CRC
+    READ_ANGLE_X_AXIS
+Switching the SCL3300 sensor operations to memory bank 0...
+Error! void NuerteySCL3300Device::ReadSensorData(T&) [with auto:41 = std::tuple<std::array<unsigned char, 4>, std::array<unsigned char, 4>, short int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&]: 
+    [-1] -> SPI Command Frame invalid or has incorrect frame CRC
+    READ_ANGLE_Y_AXIS
+Switching the SCL3300 sensor operations to memory bank 0...
+Error! void NuerteySCL3300Device::ReadSensorData(T&) [with auto:41 = std::tuple<std::array<unsigned char, 4>, std::array<unsigned char, 4>, short int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&]: 
+    [-1] -> SPI Command Frame invalid or has incorrect frame CRC
+    READ_ANGLE_Z_AXIS
+Switching the SCL3300 sensor operations to memory bank 1...
+Error! void NuerteySCL3300Device::ReadSensorData(T&) [with auto:41 = std::tuple<std::array<unsigned char, 4>, std::array<unsigned char, 4>, short unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&]: 
+    [-6] -> Return Status indicates Startup is in progress
+    READ_STATUS_SUMMARY
+Switching the SCL3300 sensor operations to memory bank 0...
+Success! void NuerteySCL3300Device::ReadSensorData(T&) [with auto:41 = std::tuple<std::array<unsigned char, 4>, std::array<unsigned char, 4>, short unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&]: 
+    [0] -> Successfully retrieved sensor data from the SCL3300 sensor device.
+    READ_WHO_AM_I
 Switching the SCL3300 sensor operations to memory bank 0...
 Switching the SCL3300 sensor operations to memory bank 1...
 Success! void NuerteySCL3300Device::ReadSensorData(T&) [with auto:41 = std::tuple<std::array<unsigned char, 4>, std::array<unsigned char, 4>, short int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&]: 
@@ -515,6 +564,144 @@ Switching the SCL3300 sensor operations to memory bank 1...
 Success! void NuerteySCL3300Device::ReadSensorData(T&) [with auto:41 = std::tuple<std::array<unsigned char, 4>, std::array<unsigned char, 4>, short int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&]: 
     [0] -> Successfully retrieved sensor data from the SCL3300 sensor device.
     READ_ACCELERATION_X_AXIS
+Switching the SCL3300 sensor operations to memory bank 1...
+Success! void NuerteySCL3300Device::ReadSensorData(T&) [with auto:41 = std::tuple<std::array<unsigned char, 4>, std::array<unsigned char, 4>, short int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&]: 
+    [0] -> Successfully retrieved sensor data from the SCL3300 sensor device.
+    READ_ACCELERATION_Y_AXIS
+Switching the SCL3300 sensor operations to memory bank 1...
+Success! void NuerteySCL3300Device::ReadSensorData(T&) [with auto:41 = std::tuple<std::array<unsigned char, 4>, std::array<unsigned char, 4>, short int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&]: 
+    [0] -> Successfully retrieved sensor data from the SCL3300 sensor device.
+    READ_ACCELERATION_Z_AXIS
+Switching the SCL3300 sensor operations to memory bank 1...
+Success! void NuerteySCL3300Device::ReadSensorData(T&) [with auto:41 = std::tuple<std::array<unsigned char, 4>, std::array<unsigned char, 4>, short int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&]: 
+    [0] -> Successfully retrieved sensor data from the SCL3300 sensor device.
+    READ_SELF_TEST_OUTPUT
+Switching the SCL3300 sensor operations to memory bank 1...
+Success! void NuerteySCL3300Device::ReadSensorData(T&) [with auto:41 = std::tuple<std::array<unsigned char, 4>, std::array<unsigned char, 4>, short int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&]: 
+    [0] -> Successfully retrieved sensor data from the SCL3300 sensor device.
+    READ_TEMPERATURE
+Switching the SCL3300 sensor operations to memory bank 0...
+Success! void NuerteySCL3300Device::ReadSensorData(T&) [with auto:41 = std::tuple<std::array<unsigned char, 4>, std::array<unsigned char, 4>, short int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&]: 
+    [0] -> Successfully retrieved sensor data from the SCL3300 sensor device.
+    READ_ANGLE_X_AXIS
+Switching the SCL3300 sensor operations to memory bank 0...
+Success! void NuerteySCL3300Device::ReadSensorData(T&) [with auto:41 = std::tuple<std::array<unsigned char, 4>, std::array<unsigned char, 4>, short int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&]: 
+    [0] -> Successfully retrieved sensor data from the SCL3300 sensor device.
+    READ_ANGLE_Y_AXIS
+Switching the SCL3300 sensor operations to memory bank 0...
+Success! void NuerteySCL3300Device::ReadSensorData(T&) [with auto:41 = std::tuple<std::array<unsigned char, 4>, std::array<unsigned char, 4>, short int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&]: 
+    [0] -> Successfully retrieved sensor data from the SCL3300 sensor device.
+    READ_ANGLE_Z_AXIS
+Switching the SCL3300 sensor operations to memory bank 1...
+Success! void NuerteySCL3300Device::ReadSensorData(T&) [with auto:41 = std::tuple<std::array<unsigned char, 4>, std::array<unsigned char, 4>, short unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&]: 
+    [0] -> Successfully retrieved sensor data from the SCL3300 sensor device.
+    READ_STATUS_SUMMARY
+Switching the SCL3300 sensor operations to memory bank 0...
+Success! void NuerteySCL3300Device::ReadSensorData(T&) [with auto:41 = std::tuple<std::array<unsigned char, 4>, std::array<unsigned char, 4>, short unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&]: 
+    [0] -> Successfully retrieved sensor data from the SCL3300 sensor device.
+    READ_WHO_AM_I
+Switching the SCL3300 sensor operations to memory bank 0...
+Switching the SCL3300 sensor operations to memory bank 1...
+Success! void NuerteySCL3300Device::ReadSensorData(T&) [with auto:41 = std::tuple<std::array<unsigned char, 4>, std::array<unsigned char, 4>, short int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&]: 
+    [0] -> Successfully retrieved sensor data from the SCL3300 sensor device.
+    READ_ACCELERATION_X_AXIS
+Switching the SCL3300 sensor operations to memory bank 1...
+Success! void NuerteySCL3300Device::ReadSensorData(T&) [with auto:41 = std::tuple<std::array<unsigned char, 4>, std::array<unsigned char, 4>, short int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&]: 
+    [0] -> Successfully retrieved sensor data from the SCL3300 sensor device.
+    READ_ACCELERATION_Y_AXIS
+Switching the SCL3300 sensor operations to memory bank 1...
+Success! void NuerteySCL3300Device::ReadSensorData(T&) [with auto:41 = std::tuple<std::array<unsigned char, 4>, std::array<unsigned char, 4>, short int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&]: 
+    [0] -> Successfully retrieved sensor data from the SCL3300 sensor device.
+    READ_ACCELERATION_Z_AXIS
+Switching the SCL3300 sensor operations to memory bank 1...
+Success! void NuerteySCL3300Device::ReadSensorData(T&) [with auto:41 = std::tuple<std::array<unsigned char, 4>, std::array<unsigned char, 4>, short int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&]: 
+    [0] -> Successfully retrieved sensor data from the SCL3300 sensor device.
+    READ_SELF_TEST_OUTPUT
+Switching the SCL3300 sensor operations to memory bank 1...
+Success! void NuerteySCL3300Device::ReadSensorData(T&) [with auto:41 = std::tuple<std::array<unsigned char, 4>, std::array<unsigned char, 4>, short int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&]: 
+    [0] -> Successfully retrieved sensor data from the SCL3300 sensor device.
+    READ_TEMPERATURE
+Switching the SCL3300 sensor operations to memory bank 0...
+Success! void NuerteySCL3300Device::ReadSensorData(T&) [with auto:41 = std::tuple<std::array<unsigned char, 4>, std::array<unsigned char, 4>, short int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&]: 
+    [0] -> Successfully retrieved sensor data from the SCL3300 sensor device.
+    READ_ANGLE_X_AXIS
+Switching the SCL3300 sensor operations to memory bank 0...
+Success! void NuerteySCL3300Device::ReadSensorData(T&) [with auto:41 = std::tuple<std::array<unsigned char, 4>, std::array<unsigned char, 4>, short int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&]: 
+    [0] -> Successfully retrieved sensor data from the SCL3300 sensor device.
+    READ_ANGLE_Y_AXIS
+Switching the SCL3300 sensor operations to memory bank 0...
+Success! void NuerteySCL3300Device::ReadSensorData(T&) [with auto:41 = std::tuple<std::array<unsigned char, 4>, std::array<unsigned char, 4>, short int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&]: 
+    [0] -> Successfully retrieved sensor data from the SCL3300 sensor device.
+    READ_ANGLE_Z_AXIS
+Switching the SCL3300 sensor operations to memory bank 1...
+Success! void NuerteySCL3300Device::ReadSensorData(T&) [with auto:41 = std::tuple<std::array<unsigned char, 4>, std::array<unsigned char, 4>, short unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&]: 
+    [0] -> Successfully retrieved sensor data from the SCL3300 sensor device.
+    READ_STATUS_SUMMARY
+Switching the SCL3300 sensor operations to memory bank 0...
+Success! void NuerteySCL3300Device::ReadSensorData(T&) [with auto:41 = std::tuple<std::array<unsigned char, 4>, std::array<unsigned char, 4>, short unsigned int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&]: 
+    [0] -> Successfully retrieved sensor data from the SCL3300 sensor device.
+    READ_WHO_AM_I
+Switching the SCL3300 sensor operations to memory bank 0...
+    GetAccelerationXAxis() = 0.04 g. Gravitational Acceleration Constant, g = 9.819 m/s2
+    GetAccelerationYAxis() = -0.50 g. Gravitational Acceleration Constant, g = 9.819 m/s2
+    GetAccelerationZAxis() = -0.04 g. Gravitational Acceleration Constant, g = 9.819 m/s2
+    GetAngleXAxis = 3.80°
+    GetAngleYAxis = 276.26°
+    GetAngleZAxis = 355.22°
+    GetTemperature<Celsius_t>() = 23.40 °C
+    GetTemperature<Fahrenheit_t>() = 74.12 °F
+    GetTemperature<Kelvin_t>() = 296.40 K
+Switching the SCL3300 sensor operations to memory bank 1...
+Success! std::error_code NuerteySCL3300Device::ReadSerialNumber(std::string&): 
+    [0] -> Successfully received contents of SERIAL1 register.
+Switching the SCL3300 sensor operations to memory bank 0...
+Success! std::error_code NuerteySCL3300Device::ReadSerialNumber(std::string&): 
+    [0] -> Successfully received contents of SERIAL2 register.
+    Serial Number = 852308482B33
+Switching the SCL3300 sensor operations to memory bank 0...
+SCL3300 Device Serial Number = 852308482B33
+Switching the SCL3300 sensor operations to memory bank 1...
+Switching the SCL3300 sensor operations to memory bank 0...
+Success! std::error_code NuerteySCL3300Device::ReadCurrentBank(ProtocolDefinitions::MemoryBank_t&): 
+    [0] -> Successfully read current bank register. 
+    1
+Switching the SCL3300 sensor operations to memory bank 0...
+SCL3300 Device Current Memory Bank = 1Switching the SCL3300 sensor operations to memory bank 0...
+Success! std::error_code NuerteySCL3300Device::ReadCommandRegister(SixteenBits_t&): 
+    [0] -> Successfully read command register of the SCL3300 sensor.
+    Command Response Value: 0000000000000000
+
+         [0] "MODE_1 -> SCL3300 Operation Mode 1"
+
+Switching the SCL3300 sensor operations to memory bank 0...
+Success! std::error_code NuerteySCL3300Device::ReadErrorFlag1Reason(uint16_t&, ErrorFlag1Reason_t&): 
+    [0] -> Successfully received contents of ERR_FLAG1 register.
+    Error Flag Bit Value Received From SCL3300 Sensor: 0000111110000000
+
+         [128] => 0000000010000000
+         "Signal saturated at C2V - Bit 7"
+
+Switching the SCL3300 sensor operations to memory bank 0...
+Success! std::error_code NuerteySCL3300Device::ReadErrorFlag2Reason(uint16_t&, ErrorFlag2Reason_t&): 
+    [0] -> Successfully received contents of ERR_FLAG2 register.
+    Error Flag Bit Value Received From SCL3300 Sensor: 0000000000000000
+
+         [0] => 0000000000000000
+         "No errors present"
+
+Switching the SCL3300 sensor operations to memory bank 1...
+Success! std::error_code NuerteySCL3300Device::ClearStatusSummaryRegister(): 
+    [0] -> Completed clearing the STATUS Summary register.
+Switching the SCL3300 sensor operations to memory bank 0...
+
+Communications disconnect (Back at nuertey-PC-LL850RSB)
+----------------------------------------------------
+C-Kermit 9.0.302 OPEN SOURCE:, 20 Aug 2011, for Linux+SSL+KRB5 (64-bit)
+ Copyright (C) 1985, 2011,
+  Trustees of Columbia University in the City of New York.
+Type ? or HELP for help.
+(/home/nuertey/) C-Kermit>
+
 
 
 ```
