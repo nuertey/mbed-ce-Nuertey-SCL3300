@@ -878,7 +878,7 @@ std::error_code NuerteySCL3300Device::LaunchSelfTestMonitoring()
     
     std::error_code result{};
     
-    static const uint32_t NUMBER_OF_TEST_RUNS(100); // Change as per User's wish.
+    static const uint32_t NUMBER_OF_TEST_RUNS(3); // Change as per User's wish.
     uint32_t countOverThreshold = 0;
     
     // Begin from 1 so that there is no possibility of us running into a
