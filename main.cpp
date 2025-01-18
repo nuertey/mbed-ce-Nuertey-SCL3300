@@ -82,7 +82,7 @@ DigitalOut        g_LEDRed(LED3);
 
 int main()
 {
-    printf("\r\n\r\nNuertey-SCL3300-Mbed - Beginning... \r\n\r\n");
+    printf("\r\n\r\nmbed-ce-Nuertey-SCL3300 - Beginning... \r\n\r\n");
 
     // Indicate with LEDs that we are commencing.
     g_LEDBlue = LED_ON;
@@ -102,16 +102,16 @@ int main()
         g_SCL3300Device.LaunchNormalOperationSequence();
 
         // Allow the user the chance to view the results:
-        ThisThread::sleep_for(5s);
+        ThisThread::sleep_for(60s);
                 
         g_SCL3300Device.LaunchSelfTestMonitoring();
 
-        // Allow the user the chance to view the results:
-        ThisThread::sleep_for(5s);
-        
         g_LEDGreen = LED_OFF;
         g_LEDBlue = LED_OFF;
+        
+        // Allow the user the chance to view the results:
+        ThisThread::sleep_for(180s);
     }
 
-    printf("\r\n\r\nNuertey-SCL3300-Mbed Application - Exiting.\r\n\r\n");
+    printf("\r\n\r\nmbed-ce-Nuertey-SCL3300 Application - Exiting.\r\n\r\n");
 }
