@@ -987,15 +987,15 @@ Switching the SCL3300 sensor operations to memory bank 1...
 
 ## Pictures Of STM32F767 MCU, the Running Code and SCL3300 Inclinometer in Action
 
-![alt text](https://github.com/nuertey/RandomArtifacts/blob/master/20210627_092115.jpg?raw=true)
+![alt text](https://github.com/nuertey/RandomArtifacts/blob/master/20250118_125154.jpg?raw=true)
 
-![alt text](https://github.com/nuertey/RandomArtifacts/blob/master/20210627_092115.jpg?raw=true)
+![alt text](https://github.com/nuertey/RandomArtifacts/blob/master/20250118_125216.jpg?raw=true)
 
-![alt text](https://github.com/nuertey/RandomArtifacts/blob/master/20210627_092115.jpg?raw=true)
+![alt text](https://github.com/nuertey/RandomArtifacts/blob/master/20250118_125245.jpg?raw=true)
 
-![alt text](https://github.com/nuertey/RandomArtifacts/blob/master/20210627_092115.jpg?raw=true)
+![alt text](https://github.com/nuertey/RandomArtifacts/blob/master/20250118_125251.jpg?raw=true)
 
-![alt text](https://github.com/nuertey/RandomArtifacts/blob/master/20210627_092115.jpg?raw=true)
+![alt text](https://github.com/nuertey/RandomArtifacts/blob/master/20250118_125308.jpg?raw=true)
 
 
 ## License
